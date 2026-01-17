@@ -1,5 +1,5 @@
 # Unreal Engine 5: Modular Inventory System
-**University Year 2 | Programming for Game Engines | WIP**
+**University Year 2 | Programming for Game Engines**
 
 A robust and efficient C++/Blueprint modular inventory plugin for Unreal Engine 5. Designed with developer accessibility in mind, the system utilises a component-based architecture to provide plug-and-play functionality for any game actor.
 
