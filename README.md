@@ -3,7 +3,7 @@
 
 A robust and efficient C++/Blueprint modular inventory plugin for Unreal Engine 5. Designed with developer accessibility in mind, the system utilises a component-based architecture to provide plug-and-play functionality for any game actor.
 
-> **[🔗 View the full technical breakdown on my Portfolio](https://sites.google.com/view/myles-coleman/projects/inventory-system-plugin-wip)**
+> **[🔗 View the full technical breakdown on my Portfolio](https://sites.google.com/view/myles-coleman/projects/inventory-system-plugin)**
 
 ## 📺 Video Showcase
 *(Video walkthrough coming soon—Project currently in active development)*
