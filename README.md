@@ -6,7 +6,7 @@ A robust and efficient C++/Blueprint modular inventory plugin for Unreal Engine 
 > **[🔗 View the full technical breakdown on my Portfolio](https://sites.google.com/view/myles-coleman/projects/inventory-system-plugin)**
 
 ## 📺 Video Showcase
-*(Video walkthrough coming soon—Project currently in active development)*
+*(Video walkthrough coming soon)*
 
 ## 🕹️ Project Overview
 This project serves as a deep dive into Unreal Engine's C++ architecture and the optimisation of large-scale game data. The goal is to move away from performance-heavy "Tick" dependencies toward a clean, event-driven system that handles complex data sorting and physical world interactions seamlessly.
@@ -20,6 +20,7 @@ This project serves as a deep dive into Unreal Engine's C++ architecture and the
 
 ### Advanced Algorithmic Logic
 * **Iterative Merge Sort:** Implemented a custom Iterative Merge Sort algorithm adapted for Unreal's `TArray` architecture. This allows for O(n log n) efficiency when sorting inventory items by weight.
+* **Item Stacking:** Developed item stacking logic, allowing groups of similar items to exist within the list. Capping item stack to a specific size, allowing multiple stacks to exist within the inventory. 
 
 ### Gameplay Integration
 * **Physical Item Interaction:** Bridged the gap between UI and world space using `OnBoxBeginOverlap` logic. Items identify the player's component, verify weight limits, and add themselves to the data structure before destroying the physical actor.
