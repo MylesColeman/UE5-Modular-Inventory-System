@@ -24,18 +24,19 @@ AItemClass::AItemClass()
 	CollisionBox->OnComponentBeginOverlap.AddDynamic(this, &AItemClass::OnBoxBeginOverlap);
 }
 
+// Item collided with - to pickup
 void AItemClass::OnBoxBeginOverlap(UPrimitiveComponent* OverlappedComp, AActor* OtherActor,
 	UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bSweep, const FHitResult& SweepResult)
 {
 	AActor* PlayerPawn = UGameplayStatics::GetPlayerPawn(GetWorld(), 0);
-	if (OtherActor != PlayerPawn)
+	if (OtherActor != PlayerPawn) // If the collision wasn't with the player
 		return;
 
 	UInventoryComponent* PlayerInventory = OtherActor->FindComponentByClass<UInventoryComponent>();
 
-	if(PlayerInventory)
+	if(PlayerInventory) // Checks if the player has an inventory
 	{
-		if (PlayerInventory->AddItem(ItemID))
+		if (PlayerInventory->AddItem(ItemID)) // If adding the item was successful
 			Destroy();
 	}
 }
@@ -44,13 +45,10 @@ void AItemClass::OnBoxBeginOverlap(UPrimitiveComponent* OverlappedComp, AActor* 
 void AItemClass::BeginPlay()
 {
 	Super::BeginPlay();
-	
 }
 
 // Called every frame
 void AItemClass::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
 }
-
